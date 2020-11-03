@@ -1,0 +1,38 @@
+@import './assets/styles/palette';
+@import './assets/styles/variables';
+@import './assets/styles/controls';
+
+body {
+  background-color: $gray-primary;
+  font-family: 'Roboto', sans-serif;
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: $small) {
+    .container {
+      width: 750px;
+    }
+  }
+  @media (min-width: $medium) {
+    .container {
+      width: 970px;
+    }
+  }
+  @media (min-width: $big) {
+    .container {
+      width: 1170px;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: $primary;
+  font-weight: 500;
+}

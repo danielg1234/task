@@ -1,0 +1,23 @@
+<table>
+  <thead>
+    <th *ngFor="let header of headers">{{ header }}</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let course of courses">
+      <td>{{ course.id }}</td>
+      <td><img [src]="course.imageUrl" alt="" /></td>
+      <td>
+        <h3 [routerLink]="['/course', course.id]">{{ course.name }}</h3>
+        <div *ngIf="course.instructors.length > 0">
+          <span>{{ instructorsName }}:</span>
+          <span *ngFor="let instructor of course.instructors">
+            {{ instructor.name }}
+          </span>
+        </div>
+      </td>
+      <td>
+        <span>{{ course.status }}</span>
+      </td>
+    </tr>
+  </tbody>
+</table>

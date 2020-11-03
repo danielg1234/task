@@ -1,0 +1,18 @@
+<div>
+  <span>
+    <span> Filter by:</span>
+    <mat-form-field appearance="fill">
+      <mat-select [formControl]="filterTypeControl">
+        <mat-option *ngFor="let filterType of filterTypesList" [value]="filterType">{{
+          filterTypes[filterType]
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-button color="accent" (click)="clear()">Clear</button>
+  </span>
+
+  <mat-form-field appearance="fill">
+    <mat-icon matPrefix color="accent">search</mat-icon>
+    <input matInput placeholder="Search courses" [formControl]="searchControl" />
+  </mat-form-field>
+</div>

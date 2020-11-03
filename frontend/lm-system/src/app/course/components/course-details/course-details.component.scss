@@ -1,0 +1,52 @@
+@import './../../../../assets/styles/variables';
+
+h1 {
+  span {
+    color: $accent;
+  }
+}
+
+label {
+  font-weight: 500;
+  color: $primary;
+  position: absolute;
+  bottom: 3em;
+  left: -15px;
+}
+
+.course-details {
+  background-color: $white;
+  padding: 20px;
+}
+
+.mat-form-field {
+  padding-top: 20px;
+  margin: 10px;
+  button {
+    font-size: 10px !important;
+    bottom: 7.5px;
+  }
+}
+
+.select-status {
+  text-transform: uppercase;
+}
+
+form {
+  .form-section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    .mat-form-field,
+    lms-course-gallery {
+      flex: 1;
+    }
+
+    lms-course-gallery {
+      margin: 10px;
+    }
+    @media screen and (min-width: $small) {
+      flex-direction: row;
+    }
+  }
+}

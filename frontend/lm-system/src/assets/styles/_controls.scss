@@ -1,0 +1,80 @@
+.mat-form-field-underline {
+  display: none;
+}
+
+.mat-form-field {
+  .mat-form-field-wrapper {
+    padding-bottom: 0;
+  }
+  .mat-form-field-prefix {
+    bottom: 0.1em;
+  }
+
+  .mat-form-field-flex {
+    border-radius: 5px;
+  }
+
+  .mat-form-field-suffix {
+    right: 35px;
+    top: 15.5px;
+    position: absolute;
+  }
+
+  .mat-form-field-infix {
+    padding: 0.25em 0 0.3em 0;
+    border-top-width: 0.3em;
+    input {
+      position: relative;
+      top: -0.55em;
+      left: 0.25em;
+    }
+
+    .mat-select-value {
+      overflow: visible;
+
+      .mat-select-value-text {
+        span {
+          position: relative;
+          bottom: 0.5em;
+        }
+      }
+    }
+  }
+}
+
+mat-select-trigger {
+  bottom: 0.25em;
+  position: relative;
+}
+
+.clearable-select {
+  background-color: $white;
+  font-weight: 500;
+  color: $primary;
+  font-size: 12px;
+  margin-right: 10px;
+  width: 15px;
+  height: 15px;
+  padding: 5px;
+  border-radius: 10px;
+  button {
+    font-size: 10px !important;
+    background-color: $accent;
+    height: 15px;
+    width: 15px;
+    color: $white !important;
+    line-height: 17px !important;
+    bottom: 0 !important;
+    mat-icon {
+      line-height: unset !important;
+      height: 10px;
+      width: 10px;
+      font-size: 10px;
+    }
+  }
+
+  span.name {
+    bottom: 0 !important;
+    padding: 0 5px;
+  }
+}

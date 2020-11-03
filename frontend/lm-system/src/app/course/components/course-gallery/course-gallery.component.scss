@@ -1,0 +1,29 @@
+@import './../../../../assets/styles/variables';
+
+.gallery {
+  position: relative;
+  label {
+    font-weight: 500;
+    color: $primary;
+    position: absolute;
+    left: 0;
+    bottom: unset;
+  }
+  div {
+    bottom: 20px;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+    @media screen and (min-width: $small) {
+      margin-top: 17px;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+<div class="gallery">
+  <label>Course card image</label>
+  <img [src]="images[imageIndex]" alt="" />
+  <div>
+    <button mat-button mat-icon-button [disabled]="imageIndex === 0" (click)="changeImageIndex(-1)">
+      <mat-icon>keyboard_arrow_left</mat-icon>
+    </button>
+    <button mat-button mat-icon-button (click)="changeImageIndex(1)" [disabled]="imageIndex === images.length - 1">
+      <mat-icon>keyboard_arrow_right</mat-icon>
+    </button>
+  </div>
+</div>

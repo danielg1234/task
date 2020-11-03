@@ -1,0 +1,46 @@
+<h1>
+  Course <span>{{ course.name }}</span>
+</h1>
+<div class="mat-elevation-z4 course-details">
+  <form [formGroup]="courseForm">
+    <div class="form-section">
+      <mat-form-field appearance="fill">
+        <label>Course Name</label>
+        <input matInput formControlName="name" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <label>Course Status</label>
+        <mat-select formControlName="status" class="select-status">
+          <mat-option *ngFor="let status of [course.status]" [value]="status"
+            ><span>{{ status }}</span>
+          </mat-option>
+        </mat-select>
+        <button mat-button matSuffix mat-icon-button aria-label="Clear" [disabled]="true">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+    <div class="form-section">
+      <lms-course-gallery [images]="course.images"></lms-course-gallery>
+      <mat-form-field appearance="fill">
+        <label>Instructor</label>
+        <mat-select formControlName="instructors" multiple>
+          <mat-select-trigger>
+            <span *ngFor="let instructor of selectedInstructors" class="clearable-select">
+              <button mat-button mat-icon-button aria-label="Clear" [disabled]="true">
+                <mat-icon>close</mat-icon>
+              </button>
+              <span class="name">{{ instructor.name }}</span>
+            </span>
+          </mat-select-trigger>
+          <mat-option *ngFor="let instructor of course.instructors" [value]="instructor">{{
+            instructor.name
+          }}</mat-option>
+        </mat-select>
+        <button mat-button matSuffix mat-icon-button aria-label="Clear" [disabled]="true">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  </form>
+</div>
